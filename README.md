@@ -1,146 +1,108 @@
-# Machine-failure-detection-analysis-report-ML-DA-
-Predictive Maintenance using Data Analytics &amp; Machine Learning
+# Machine Failure Prediction 🚨
 
+Welcome to the **Machine Failure Prediction** repository! This project uses machine learning techniques to analyze sensor data and predict potential machine failures in advance. 
 
-📘 Overview
+---
 
-In today’s industrial era, unplanned machine downtime causes significant losses in productivity, repair costs, and reliability. This project, Machine Failure Detection and Analysis, applies data analytics and machine learning to predict machine failures before they occur.
+## 📂 Project Overview
 
-By leveraging sensor data such as temperature, pressure, vibration, and current, the system identifies early warning signs of malfunction, enabling industries to shift from reactive to predictive maintenance — reducing downtime and maintenance costs while improving equipment longevity.
+Predicting machine failures is crucial for ensuring the efficiency and safety of industrial operations. This repository provides:
 
-🚀 Features
+- A detailed **dataset** of machine sensor readings.
+- A **Jupyter Notebook** with exploratory data analysis and predictive modeling.
 
-✅ Data Preprocessing & Cleaning – Removes duplicates, handles missing data, and normalizes features.
-✅ Feature Engineering – Extracts important indicators using statistical and correlation analysis.
-✅ Model Training & Evaluation – Uses ML algorithms like Random Forest, Isolation Forest, and Gradient Boosting.
-✅ Performance Visualization – Displays confusion matrix, ROC curve, feature importance, and sensor correlations.
-✅ Tkinter Dashboard Interface – Interactive desktop UI for real-time visualization and metric exploration.
-✅ PDF Report Generation – Summarizes the analysis, results, and recommendations in a downloadable format.
+By analyzing features such as temperature, air quality, current usage, and more, we aim to detect patterns that lead to failures.
 
-🧩 System Architecture
-Sensor Data → Data Preprocessing → Feature Engineering 
-     ↓
-Model Training → Prediction → Visualization Dashboard → Report Generation
+---
 
+## 🗂️ Dataset Overview
 
-The architecture integrates data collection, preprocessing, model analytics, and decision support into a single framework.
+This dataset contains sensor data collected from various machines, with the goal of predicting failures in advance. Below is a summary of the dataset:
 
-🧠 Technologies Used
-Category	Tools & Libraries
-Programming Language	Python 3.9+
-Data Processing	Pandas, NumPy
-Machine Learning	Scikit-learn
-Visualization	Matplotlib, Seaborn
-Interface	Tkinter
-Reporting	ReportLab
-📊 Dashboard Preview
+| Column Name     | Description                                             |
+|-----------------|---------------------------------------------------------|
+| `footfall`      | Number of people or objects passing by the machine      |
+| `temp Mode`     | Temperature mode or setting of the machine              |
+| `AQ`            | Air quality index near the machine                      |
+| `USS`           | Ultrasonic sensor data, indicating proximity measurements |
+| `CS`            | Current sensor readings (electrical current usage)      |
+| `VOC`           | Volatile organic compounds level detected               |
+| `RP`            | Rotational position or RPM (revolutions per minute)     |
+| `IP`            | Input pressure to the machine                           |
+| `Temperature`   | Operating temperature of the machine                    |
+| `fail`          | Binary indicator of machine failure (1 = Failure, 0 = No Failure) |
 
-An interactive Tkinter-based Analysis Dashboard provides:
+---
 
-Confusion Matrix
+## ⚙️ Installation
 
-Feature Importance Chart
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/machine-failure-prediction.git
+   ```
 
-ROC Curve
+2. Navigate to the project directory:
+   ```bash
+   cd machine-failure-prediction
+   ```
 
-Correlation Heatmap
+3. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Failure Distribution Plot
+---
 
-Temperature vs Pressure Relationship
+## 📝 Usage
 
-Each graph opens dynamically for better interpretation and visual analytics.
+- Open the Jupyter Notebook:
+   ```bash
+   jupyter notebook Machine\ Failure.ipynb
+   ```
+- Explore the dataset and run the cells to analyze the data and train the model.
+- Use the pre-trained model to predict failures on new data.
 
-🧪 Dataset
+---
 
-The dataset includes machine operational and sensor readings over time, typically with the following attributes:
+## 📊 Key Insights
 
-Feature	Description
-Temperature	Machine operating temperature
-Pressure	Input/Output pressure
-Vibration	Mechanical vibration intensity
-Current Sensor (CS)	Electrical current usage
-Air Quality (AQ)	Surrounding air index
-VOC	Volatile Organic Compound level
-Rotational Speed (RP)	RPM of machine components
-Input Pressure (IP)	Feed pressure value
-Fail	Binary indicator (1 = Failure, 0 = Normal)
+### 1. Sensor Data Correlations 📈
+- Features such as `Temperature`, `VOC`, and `CS` show strong correlations with failures.
 
-Dataset Source: Kaggle Predictive Maintenance Dataset (2024)
+### 2. Predictive Modeling ⚙️
+- Implemented models: Logistic Regression, Random Forest, and XGBoost.
+- Achieved an accuracy of **XX%** on test data.
 
-⚙️ How to Run
-1️⃣ Clone Repository
-git clone https://github.com/Adhityan15/Machine-Failure-Detection.git
-cd Machine-Failure-Detection
+---
 
-2️⃣ Install Dependencies
-pip install -r requirements.txt
+## 📎 Repository Structure
 
-3️⃣ Run Jupyter Notebook (Training & EDA)
-jupyter notebook Machine_failure_detection.ipynb
+```
+.
+├── data (1).csv           # Dataset file
+├── Machine Failure.ipynb  # Jupyter Notebook
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation
+```
 
-4️⃣ Launch the Tkinter Dashboard
-python analysis_dashboard.py
+---
 
-🧩 Model Evaluation
-Metric	Description
-Accuracy	Overall correctness of predictions
-Precision	True failures detected out of all predicted failures
-Recall	Proportion of actual failures correctly identified
-F1 Score	Harmonic mean of precision and recall
-ROC-AUC	Model’s capability to distinguish between failure and normal states
+## 🖼️ Visualizations
 
-Visuals include:
+### Machine Failures by Sensor Data
+![Sample Visualization](temp_vs_fail.png)  
 
-Confusion Matrix
+---
 
-F1-score bar chart
+## 🤝 Contributing
 
-ROC Curve
+Contributions are welcome! Feel free to open an issue or submit a pull request for any improvements or bug fixes.
 
-Feature Importance
+---
 
-💻 Sample Output
-Machine ID: MCH_103
-Condition Status: Failure Risk
-Recommendation: Inspect coolant system and vibration dampers.
-Generated Report: MCH_103_maintenance_report.pdf
+## 📬 Contact
 
-🏁 Results & Insights
-
-Achieved ~94% accuracy on test data.
-
-Temperature, Pressure, and Vibration emerged as key predictive indicators.
-
-Early detection allowed potential downtime reduction by 35–40% in simulation.
-
-🔮 Future Enhancements
-
-Integration with IoT devices for real-time streaming data.
-
-LSTM/CNN deep learning models for sequential time-series analysis.
-
-Explainable AI (SHAP/LIME) integration for transparent predictions.
-
-Automated maintenance scheduling based on predicted failure probability.
-
-🧑‍💻 Developer
-
-R. Adhityan
-🎓 B.Tech Artificial Intelligence & Data Science
-📍 Panimalar Engineering College, Chennai
-📬 GitHub: Adhityan15
-
-📚 References
-
-Lee, J. et al. (2015). A Cyber-Physical Systems Architecture for Industry 4.0.
-
-Wang, T. et al. (2019). Machine Learning for Predictive Maintenance: A Review.
-
-Breiman, L. (2001). Random Forests.
-
-Kaggle Predictive Maintenance Dataset (2024).
-
-Bousdekis, A. et al. (2017). Predictive Maintenance 4.0.
-
-⭐ If you found this project helpful, give it a star on GitHub and share your feedback!
+For questions or suggestions, please contact:
+- Vinit Golani: [vinit.b.golani@gmail.com](mailto:vinit.b.golani@gmail.com)
+- GitHub: [Vinitgolani](https://github.com/Vinitgolani)
+- LinkedIn: [vinitgolani](https://www.linkedin.com/in/vinitgolani/)
