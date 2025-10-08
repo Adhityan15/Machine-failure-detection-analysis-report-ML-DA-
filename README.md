@@ -57,7 +57,7 @@ This dataset contains sensor data collected from various machines, with the goal
 
 - Open the Jupyter Notebook:
    ```bash
-   jupyter notebook Machine\ Failure.ipynb
+   jupyter notebook Machine_Failure_Detection.ipynb
    ```
 - Explore the dataset and run the cells to analyze the data and train the model.
 - Use the pre-trained model to predict failures on new data.
